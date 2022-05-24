@@ -15,6 +15,7 @@ namespace Shareport
     {
         private int eventId = 1;
 
+
         public ShareportService()
         {
             InitializeComponent();
@@ -26,6 +27,7 @@ namespace Shareport
             }
             eventLog1.Source = "Shareport service";
             eventLog1.Log = "ShareportLog";
+
         }
 
         protected override void OnStart(string[] args)
