@@ -12,14 +12,20 @@ namespace Shareport
         /// <summary>
         /// Punto di ingresso principale dell'applicazione.
         /// </summary>
+
         static void Main()
         {
+#if (!DEBUG)
             ServiceBase[] ServicesToRun;
             ServicesToRun = new ServiceBase[]
             {
-                new Service1()
+                new ShareportService()
             };
             ServiceBase.Run(ServicesToRun);
+#else
+            ShareportService serviceCall = new ShareportService();
+            serviceCall.ExecuteService();
+#endif
         }
     }
 }

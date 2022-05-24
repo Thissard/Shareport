@@ -1,6 +1,6 @@
 ﻿namespace Shareport
 {
-    partial class Service1
+    partial class ShareportService
     {
         /// <summary> 
         /// Variabile di progettazione necessaria.
@@ -37,7 +37,7 @@
             // 
             // Service1
             // 
-            this.ServiceName = "Service1";
+            this.ServiceName = "Shareport";
             ((System.ComponentModel.ISupportInitialize)(this.eventLog1)).EndInit();
 
         }

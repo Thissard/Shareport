@@ -11,10 +11,11 @@ using System.Timers;
 
 namespace Shareport
 {
-    public partial class Service1 : ServiceBase
+    public partial class ShareportService : ServiceBase
     {
         private int eventId = 1;
-        public Service1()
+
+        public ShareportService()
         {
             InitializeComponent();
             eventLog1 = new EventLog();
@@ -41,7 +42,12 @@ namespace Shareport
         {
             // TODO: Insert monitoring activities here.
             eventLog1.WriteEntry("Tick", EventLogEntryType.Information, eventId++);
+            ExecuteService();
+        }
 
+        public void ExecuteService()
+        {
+            
         }
 
         protected override void OnStop()
